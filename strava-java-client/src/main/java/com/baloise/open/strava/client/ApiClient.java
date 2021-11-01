@@ -54,7 +54,7 @@ import com.baloise.open.strava.client.auth.HttpBearerAuth;
 import com.baloise.open.strava.client.auth.ApiKeyAuth;
 import com.baloise.open.strava.client.auth.OAuth;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:37:53.710209+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
 @Component("com.baloise.open.strava.client.ApiClient")
 public class ApiClient {
     public enum CollectionFormat {

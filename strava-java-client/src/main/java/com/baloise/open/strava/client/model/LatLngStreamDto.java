@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   LatLngStreamDto.JSON_PROPERTY_SERIES_TYPE,
   LatLngStreamDto.JSON_PROPERTY_DATA
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:37:53.710209+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
 public class LatLngStreamDto {
   public static final String JSON_PROPERTY_ORIGINAL_SIZE = "original_size";
   private Integer originalSize;

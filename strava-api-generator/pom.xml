@@ -53,7 +53,7 @@
                 <configuration>
                     <filesets>
                         <fileset>
-                            <directory>${project.basedir}/strava-java-client</directory>
+                            <directory>${project.basedir}/../strava-java-client</directory>
                             <includes>
                                 <include>**</include>
                             </includes>

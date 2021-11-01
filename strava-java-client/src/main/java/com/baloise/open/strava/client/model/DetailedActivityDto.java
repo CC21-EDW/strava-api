@@ -93,7 +93,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DetailedActivityDto.JSON_PROPERTY_LAPS,
   DetailedActivityDto.JSON_PROPERTY_BEST_EFFORTS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:37:53.710209+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
 public class DetailedActivityDto {
   public static final String JSON_PROPERTY_ID = "id";
   private Long id;

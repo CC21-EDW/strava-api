@@ -49,7 +49,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DetailedClubDto.JSON_PROPERTY_OWNER,
   DetailedClubDto.JSON_PROPERTY_FOLLOWING_COUNT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:37:53.710209+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
 public class DetailedClubDto {
   public static final String JSON_PROPERTY_ID = "id";
   private Long id;

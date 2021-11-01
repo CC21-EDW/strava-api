@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DetailedClubAllOfDto.JSON_PROPERTY_OWNER,
   DetailedClubAllOfDto.JSON_PROPERTY_FOLLOWING_COUNT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:37:53.710209+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
 public class DetailedClubAllOfDto {
   /**
    * The membership status of the logged-in athlete.

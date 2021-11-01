@@ -74,7 +74,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   SummaryActivityAllOfDto.JSON_PROPERTY_MAX_WATTS,
   SummaryActivityAllOfDto.JSON_PROPERTY_WEIGHTED_AVERAGE_WATTS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:37:53.710209+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
 public class SummaryActivityAllOfDto {
   public static final String JSON_PROPERTY_EXTERNAL_ID = "external_id";
   private String externalId;

@@ -40,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ExplorerSegmentDto.JSON_PROPERTY_DISTANCE,
   ExplorerSegmentDto.JSON_PROPERTY_POINTS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:37:53.710209+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
 public class ExplorerSegmentDto {
   public static final String JSON_PROPERTY_ID = "id";
   private Long id;

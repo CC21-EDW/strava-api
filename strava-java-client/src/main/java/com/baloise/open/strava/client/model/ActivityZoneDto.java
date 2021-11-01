@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ActivityZoneDto.JSON_PROPERTY_CUSTOM_ZONES,
   ActivityZoneDto.JSON_PROPERTY_MAX
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:37:53.710209+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
 public class ActivityZoneDto {
   public static final String JSON_PROPERTY_SCORE = "score";
   private Integer score;

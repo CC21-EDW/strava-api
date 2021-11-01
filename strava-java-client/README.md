@@ -4,7 +4,7 @@ Strava API v3
 
 - API version: 3.0.0
 
-- Build date: 2021-11-01T17:31:29.709515+01:00[Europe/Zurich]
+- Build date: 2021-11-01T17:48:28.683713+01:00[Europe/Zurich]
 
 The [Swagger Playground](https://developers.strava.com/playground) is the easiest way to familiarize yourself with the Strava API by submitting HTTP requests and observing the responses before you write any client code. It will show what a response will look like with different endpoints depending on the authorization scope you receive from your athletes. To use the Playground, go to https://www.strava.com/settings/api and change your “Authorization Callback Domain” to developers.strava.com. Please note, we only support Swagger 2.0. There is a known issue where you can only select one scope at a time. For more information, please check the section “client code” at https://developers.strava.com/docs.
 
@@ -42,7 +42,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.baloise.open.edw</groupId>
   <artifactId>strava-java-client</artifactId>
-  <version>0.9.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -52,7 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.baloise.open.edw:strava-java-client:0.9.0-SNAPSHOT"
+compile "com.baloise.open.edw:strava-java-client:1.0.0-SNAPSHOT"
 ```
 
 ### Others
@@ -65,7 +65,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/strava-java-client-0.9.0-SNAPSHOT.jar`
+- `target/strava-java-client-1.0.0-SNAPSHOT.jar`
 - `target/lib/*.jar`
 
 ## Getting Started

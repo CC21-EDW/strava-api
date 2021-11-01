@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   SplitDto.JSON_PROPERTY_MOVING_TIME,
   SplitDto.JSON_PROPERTY_SPLIT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:37:53.710209+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
 public class SplitDto {
   public static final String JSON_PROPERTY_AVERAGE_SPEED = "average_speed";
   private Float averageSpeed;
