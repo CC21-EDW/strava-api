@@ -40,7 +40,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
 
-        <openapi-generator-maven-plugin.version>4.3.1</openapi-generator-maven-plugin.version>
+        <openapi-generator-maven-plugin.version>5.1.0</openapi-generator-maven-plugin.version>
         <target.package.name>com.baloise.open.strava.client</target.package.name>
     </properties>
 
