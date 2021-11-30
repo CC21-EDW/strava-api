@@ -11,6 +11,7 @@ cp -R repository-template-java/ new-name && cd new-name && git config --local --
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bf6fa237dd934970991ecba2c66db23e)](https://app.codacy.com/app/CC21-EDW/strava-api?utm_source=github.com&utm_medium=referral&utm_content=CC21-EDW/strava-api&utm_campaign=Badge_Grade_Dashboard)
 [![DepShield Badge](https://depshield.sonatype.org/badges/CC21-EDW/strava-api/depshield.svg)](https://depshield.github.io)
 ![Build Status](https://github.com/CC21-EDW/strava-api/workflows/CI/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=CC21-EDW_strava-api&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=CC21-EDW_strava-api)
 
 ## the [docs](docs/index.md)
 
