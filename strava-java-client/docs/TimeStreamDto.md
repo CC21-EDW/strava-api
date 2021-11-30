@@ -2,6 +2,7 @@
 
 # TimeStreamDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

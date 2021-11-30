@@ -21,6 +21,7 @@ import com.baloise.open.strava.client.model.SummarySegmentDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -51,7 +52,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   RouteDto.JSON_PROPERTY_ESTIMATED_MOVING_TIME,
   RouteDto.JSON_PROPERTY_SEGMENTS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
+@JsonTypeName("Route")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T09:50:39.653673500+01:00[Europe/Zurich]")
 public class RouteDto {
   public static final String JSON_PROPERTY_ATHLETE = "athlete";
   private SummaryAthleteDto athlete = null;
@@ -539,7 +541,7 @@ public class RouteDto {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -571,7 +573,6 @@ public class RouteDto {
     return Objects.hash(athlete, description, distance, elevationGain, id, idStr, map, name, _private, starred, timestamp, type, subType, createdAt, updatedAt, estimatedMovingTime, segments);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
@@ -601,7 +602,7 @@ public class RouteDto {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

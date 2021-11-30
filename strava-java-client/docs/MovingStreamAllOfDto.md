@@ -2,6 +2,7 @@
 
 # MovingStreamAllOfDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

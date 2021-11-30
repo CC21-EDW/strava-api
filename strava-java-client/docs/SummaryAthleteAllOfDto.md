@@ -2,6 +2,7 @@
 
 # SummaryAthleteAllOfDto
 
+
 ## Properties
 
 Name | Type | Description | Notes
@@ -17,8 +18,8 @@ Name | Type | Description | Notes
 **sex** | [**SexEnum**](#SexEnum) | The athlete&#39;s sex. |  [optional]
 **premium** | **Boolean** | Deprecated.  Use summit field instead. Whether the athlete has any Summit subscription. |  [optional]
 **summit** | **Boolean** | Whether the athlete has any Summit subscription. |  [optional]
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the athlete was created. |  [optional]
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the athlete was last updated. |  [optional]
+**createdAt** | **OffsetDateTime** | The time at which the athlete was created. |  [optional]
+**updatedAt** | **OffsetDateTime** | The time at which the athlete was last updated. |  [optional]
 
 
 

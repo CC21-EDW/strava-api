@@ -7,12 +7,12 @@ import com.baloise.open.strava.client.model.ExplorerResponseDto;
 import com.baloise.open.strava.client.model.FaultDto;
 import com.baloise.open.strava.client.model.SummarySegmentDto;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,7 +20,6 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
@@ -29,7 +28,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T09:50:39.653673500+01:00[Europe/Zurich]")
 @Component("com.baloise.open.strava.client.api.SegmentsApi")
 public class SegmentsApi {
     private ApiClient apiClient;
@@ -92,24 +91,24 @@ public class SegmentsApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         queryParams.putAll(apiClient.parameterToMultiValueMap(ApiClient.CollectionFormat.valueOf("csv".toUpperCase(Locale.ROOT)), "bounds", bounds));
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "activity_type", activityType));
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "min_cat", minCat));
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "max_cat", maxCat));
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<ExplorerResponseDto> returnType = new ParameterizedTypeReference<ExplorerResponseDto>() {};
-        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * List Starred Segments
@@ -143,22 +142,22 @@ public class SegmentsApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "page", page));
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "per_page", perPage));
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<List<SummarySegmentDto>> returnType = new ParameterizedTypeReference<List<SummarySegmentDto>>() {};
-        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * Get Segment
@@ -198,19 +197,19 @@ public class SegmentsApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<DetailedSegmentDto> returnType = new ParameterizedTypeReference<DetailedSegmentDto>() {};
-        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * Star Segment
@@ -257,23 +256,23 @@ public class SegmentsApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         if (starred != null)
             formParams.add("starred", starred);
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 
             "multipart/form-data"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<DetailedSegmentDto> returnType = new ParameterizedTypeReference<DetailedSegmentDto>() {};
-        return apiClient.invokeAPI(path, HttpMethod.PUT, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.PUT, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
 }

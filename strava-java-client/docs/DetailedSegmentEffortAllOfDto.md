@@ -2,6 +2,7 @@
 
 # DetailedSegmentEffortAllOfDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

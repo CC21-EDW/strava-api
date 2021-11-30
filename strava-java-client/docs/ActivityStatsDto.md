@@ -3,6 +3,7 @@
 # ActivityStatsDto
 
 A set of rolled-up statistics and totals for an athlete
+
 ## Properties
 
 Name | Type | Description | Notes

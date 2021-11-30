@@ -28,6 +28,7 @@ import com.baloise.open.strava.client.model.SummaryGearDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -93,7 +94,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DetailedActivityDto.JSON_PROPERTY_LAPS,
   DetailedActivityDto.JSON_PROPERTY_BEST_EFFORTS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
+@JsonTypeName("DetailedActivity")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T09:50:39.653673500+01:00[Europe/Zurich]")
 public class DetailedActivityDto {
   public static final String JSON_PROPERTY_ID = "id";
   private Long id;
@@ -1610,7 +1612,7 @@ public class DetailedActivityDto {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -1677,7 +1679,6 @@ public class DetailedActivityDto {
     return Objects.hash(id, externalId, uploadId, athlete, name, distance, movingTime, elapsedTime, totalElevationGain, elevHigh, elevLow, type, startDate, startDateLocal, timezone, startLatlng, endLatlng, achievementCount, kudosCount, commentCount, athleteCount, photoCount, totalPhotoCount, map, trainer, commute, manual, _private, flagged, workoutType, uploadIdStr, averageSpeed, maxSpeed, hasKudoed, hideFromHome, gearId, kilojoules, averageWatts, deviceWatts, maxWatts, weightedAverageWatts, description, photos, gear, calories, segmentEfforts, deviceName, embedToken, splitsMetric, splitsStandard, laps, bestEfforts);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
@@ -1742,7 +1743,7 @@ public class DetailedActivityDto {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

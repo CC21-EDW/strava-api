@@ -12,12 +12,12 @@ import com.baloise.open.strava.client.model.SummaryActivityDto;
 import com.baloise.open.strava.client.model.SummaryAthleteDto;
 import com.baloise.open.strava.client.model.UpdatableActivityDto;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -25,7 +25,6 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
@@ -34,7 +33,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T17:50:53.245687+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T09:50:39.653673500+01:00[Europe/Zurich]")
 @Component("com.baloise.open.strava.client.api.ActivitiesApi")
 public class ActivitiesApi {
     private ApiClient apiClient;
@@ -122,7 +121,7 @@ public class ActivitiesApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         if (name != null)
             formParams.add("name", name);
@@ -143,19 +142,19 @@ public class ActivitiesApi {
         if (hideFromHome != null)
             formParams.add("hide_from_home", hideFromHome);
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 
             "multipart/form-data"
-        };
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<DetailedActivityDto> returnType = new ParameterizedTypeReference<DetailedActivityDto>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * Get Activity
@@ -197,21 +196,21 @@ public class ActivitiesApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "include_all_efforts", includeAllEfforts));
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<DetailedActivityDto> returnType = new ParameterizedTypeReference<DetailedActivityDto>() {};
-        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * List Activity Comments
@@ -255,22 +254,22 @@ public class ActivitiesApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "page", page));
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "per_page", perPage));
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<List<CommentDto>> returnType = new ParameterizedTypeReference<List<CommentDto>>() {};
-        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * List Activity Kudoers
@@ -314,22 +313,22 @@ public class ActivitiesApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "page", page));
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "per_page", perPage));
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<List<SummaryAthleteDto>> returnType = new ParameterizedTypeReference<List<SummaryAthleteDto>>() {};
-        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * List Activity Laps
@@ -369,19 +368,19 @@ public class ActivitiesApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<List<LapDto>> returnType = new ParameterizedTypeReference<List<LapDto>>() {};
-        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * List Athlete Activities
@@ -419,24 +418,24 @@ public class ActivitiesApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "before", before));
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "after", after));
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "page", page));
         queryParams.putAll(apiClient.parameterToMultiValueMap(null, "per_page", perPage));
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<List<SummaryActivityDto>> returnType = new ParameterizedTypeReference<List<SummaryActivityDto>>() {};
-        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * Get Activity Zones
@@ -476,19 +475,19 @@ public class ActivitiesApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<List<ActivityZoneDto>> returnType = new ParameterizedTypeReference<List<ActivityZoneDto>>() {};
-        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.GET, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
      * Update Activity
@@ -530,18 +529,18 @@ public class ActivitiesApi {
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap formParams = new LinkedMultiValueMap();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
-        final String[] accepts = { 
+        final String[] localVarAccepts = { 
             "application/json"
-        };
-        final List<MediaType> accept = apiClient.selectHeaderAccept(accepts);
-        final String[] contentTypes = { };
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "strava_oauth" };
 
         ParameterizedTypeReference<DetailedActivityDto> returnType = new ParameterizedTypeReference<DetailedActivityDto>() {};
-        return apiClient.invokeAPI(path, HttpMethod.PUT, queryParams, postBody, headerParams, cookieParams, formParams, accept, contentType, authNames, returnType);
+        return apiClient.invokeAPI(path, HttpMethod.PUT, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
 }

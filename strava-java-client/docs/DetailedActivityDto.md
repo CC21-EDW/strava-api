@@ -2,6 +2,7 @@
 
 # DetailedActivityDto
 
+
 ## Properties
 
 Name | Type | Description | Notes
@@ -17,9 +18,9 @@ Name | Type | Description | Notes
 **totalElevationGain** | **Float** | The activity&#39;s total elevation gain. |  [optional]
 **elevHigh** | **Float** | The activity&#39;s highest elevation, in meters |  [optional]
 **elevLow** | **Float** | The activity&#39;s lowest elevation, in meters |  [optional]
-**type** | [**ActivityTypeDto**](ActivityTypeDto.md) |  |  [optional]
-**startDate** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the activity was started. |  [optional]
-**startDateLocal** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the activity was started in the local timezone. |  [optional]
+**type** | **ActivityTypeDto** |  |  [optional]
+**startDate** | **OffsetDateTime** | The time at which the activity was started. |  [optional]
+**startDateLocal** | **OffsetDateTime** | The time at which the activity was started in the local timezone. |  [optional]
 **timezone** | **String** | The timezone of the activity |  [optional]
 **startLatlng** | **List&lt;Float&gt;** | A pair of latitude/longitude coordinates, represented as an array of 2 floating point numbers. |  [optional]
 **endLatlng** | **List&lt;Float&gt;** | A pair of latitude/longitude coordinates, represented as an array of 2 floating point numbers. |  [optional]

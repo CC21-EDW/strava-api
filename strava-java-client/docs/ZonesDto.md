@@ -2,6 +2,7 @@
 
 # ZonesDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

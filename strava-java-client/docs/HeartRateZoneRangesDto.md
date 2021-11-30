@@ -2,6 +2,7 @@
 
 # HeartRateZoneRangesDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

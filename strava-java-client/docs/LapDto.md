@@ -2,6 +2,7 @@
 
 # LapDto
 
+
 ## Properties
 
 Name | Type | Description | Notes
@@ -21,8 +22,8 @@ Name | Type | Description | Notes
 **name** | **String** | The name of the lap |  [optional]
 **paceZone** | **Integer** | The athlete&#39;s pace zone during this lap |  [optional]
 **split** | **Integer** |  |  [optional]
-**startDate** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the lap was started. |  [optional]
-**startDateLocal** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the lap was started in the local timezone. |  [optional]
+**startDate** | **OffsetDateTime** | The time at which the lap was started. |  [optional]
+**startDateLocal** | **OffsetDateTime** | The time at which the lap was started in the local timezone. |  [optional]
 **totalElevationGain** | **Float** | The elevation gain of this lap, in meters |  [optional]
 
 

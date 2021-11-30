@@ -3,6 +3,7 @@
 # ActivityTotalDto
 
 A roll-up of metrics pertaining to a set of activities. Values are in seconds and meters.
+
 ## Properties
 
 Name | Type | Description | Notes

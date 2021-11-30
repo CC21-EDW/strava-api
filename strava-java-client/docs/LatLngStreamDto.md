@@ -2,6 +2,7 @@
 
 # LatLngStreamDto
 
+
 ## Properties
 
 Name | Type | Description | Notes
@@ -9,7 +10,7 @@ Name | Type | Description | Notes
 **originalSize** | **Integer** | The number of data points in this stream |  [optional]
 **resolution** | [**ResolutionEnum**](#ResolutionEnum) | The level of detail (sampling) in which this stream was returned |  [optional]
 **seriesType** | [**SeriesTypeEnum**](#SeriesTypeEnum) | The base series used in the case the stream was downsampled |  [optional]
-**data** | [**List&lt;List&lt;Float&gt;&gt;**](List.md) | The sequence of lat/long values for this stream |  [optional]
+**data** | **List&lt;List&lt;Float&gt;&gt;** | The sequence of lat/long values for this stream |  [optional]
 
 
 

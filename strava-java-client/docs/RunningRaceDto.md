@@ -2,6 +2,7 @@
 
 # RunningRaceDto
 
+
 ## Properties
 
 Name | Type | Description | Notes
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 **name** | **String** | The name of this race. |  [optional]
 **runningRaceType** | **Integer** | The type of this race. |  [optional]
 **distance** | **Float** | The race&#39;s distance, in meters. |  [optional]
-**startDateLocal** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the race begins started in the local timezone. |  [optional]
+**startDateLocal** | **OffsetDateTime** | The time at which the race begins started in the local timezone. |  [optional]
 **city** | **String** | The name of the city in which the race is taking place. |  [optional]
 **state** | **String** | The name of the state or geographical region in which the race is taking place. |  [optional]
 **country** | **String** | The name of the country in which the race is taking place. |  [optional]

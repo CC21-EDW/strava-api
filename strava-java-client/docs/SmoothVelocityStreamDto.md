@@ -2,6 +2,7 @@
 
 # SmoothVelocityStreamDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

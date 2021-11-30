@@ -2,6 +2,7 @@
 
 # TemperatureStreamDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

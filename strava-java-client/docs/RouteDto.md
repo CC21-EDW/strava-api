@@ -2,6 +2,7 @@
 
 # RouteDto
 
+
 ## Properties
 
 Name | Type | Description | Notes
@@ -19,8 +20,8 @@ Name | Type | Description | Notes
 **timestamp** | **Integer** | An epoch timestamp of when the route was created |  [optional]
 **type** | **Integer** | This route&#39;s type (1 for ride, 2 for runs) |  [optional]
 **subType** | **Integer** | This route&#39;s sub-type (1 for road, 2 for mountain bike, 3 for cross, 4 for trail, 5 for mixed) |  [optional]
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the route was created |  [optional]
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the route was last updated |  [optional]
+**createdAt** | **OffsetDateTime** | The time at which the route was created |  [optional]
+**updatedAt** | **OffsetDateTime** | The time at which the route was last updated |  [optional]
 **estimatedMovingTime** | **Integer** | Estimated time in seconds for the authenticated athlete to complete route |  [optional]
 **segments** | [**List&lt;SummarySegmentDto&gt;**](SummarySegmentDto.md) | The segments traversed by this route |  [optional]
 

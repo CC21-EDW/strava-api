@@ -3,6 +3,7 @@
 # FaultDto
 
 Encapsulates the errors that may be returned from the API.
+
 ## Properties
 
 Name | Type | Description | Notes

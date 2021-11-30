@@ -2,6 +2,7 @@
 
 # TimedZoneRangeAllOfDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

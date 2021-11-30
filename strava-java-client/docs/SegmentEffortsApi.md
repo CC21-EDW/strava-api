@@ -39,8 +39,8 @@ public class Example {
 
         SegmentEffortsApi apiInstance = new SegmentEffortsApi(defaultClient);
         Integer segmentId = 56; // Integer | The identifier of the segment.
-        OffsetDateTime startDateLocal = new OffsetDateTime(); // OffsetDateTime | ISO 8601 formatted date time.
-        OffsetDateTime endDateLocal = new OffsetDateTime(); // OffsetDateTime | ISO 8601 formatted date time.
+        OffsetDateTime startDateLocal = OffsetDateTime.now(); // OffsetDateTime | ISO 8601 formatted date time.
+        OffsetDateTime endDateLocal = OffsetDateTime.now(); // OffsetDateTime | ISO 8601 formatted date time.
         Integer perPage = 30; // Integer | Number of items per page. Defaults to 30.
         try {
             List<DetailedSegmentEffortDto> result = apiInstance.getEffortsBySegmentId(segmentId, startDateLocal, endDateLocal, perPage);
@@ -78,6 +78,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -149,6 +150,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

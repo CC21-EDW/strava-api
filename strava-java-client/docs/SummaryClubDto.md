@@ -2,6 +2,7 @@
 
 # SummaryClubDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

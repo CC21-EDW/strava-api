@@ -2,6 +2,7 @@
 
 # DetailedAthleteDto
 
+
 ## Properties
 
 Name | Type | Description | Notes
@@ -18,8 +19,8 @@ Name | Type | Description | Notes
 **sex** | [**SexEnum**](#SexEnum) | The athlete&#39;s sex. |  [optional]
 **premium** | **Boolean** | Deprecated.  Use summit field instead. Whether the athlete has any Summit subscription. |  [optional]
 **summit** | **Boolean** | Whether the athlete has any Summit subscription. |  [optional]
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the athlete was created. |  [optional]
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) | The time at which the athlete was last updated. |  [optional]
+**createdAt** | **OffsetDateTime** | The time at which the athlete was created. |  [optional]
+**updatedAt** | **OffsetDateTime** | The time at which the athlete was last updated. |  [optional]
 **followerCount** | **Integer** | The athlete&#39;s follower count. |  [optional]
 **friendCount** | **Integer** | The athlete&#39;s friend count. |  [optional]
 **measurementPreference** | [**MeasurementPreferenceEnum**](#MeasurementPreferenceEnum) | The athlete&#39;s preferred unit system. |  [optional]

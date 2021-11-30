@@ -2,6 +2,7 @@
 
 # SmoothGradeStreamDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

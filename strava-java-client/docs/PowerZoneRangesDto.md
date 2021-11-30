@@ -2,6 +2,7 @@
 
 # PowerZoneRangesDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

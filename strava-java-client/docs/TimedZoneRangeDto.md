@@ -3,6 +3,7 @@
 # TimedZoneRangeDto
 
 A union type representing the time spent in a given zone.
+
 ## Properties
 
 Name | Type | Description | Notes

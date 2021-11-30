@@ -3626,6 +3626,7 @@ components:
           items:
             $ref: '#/components/schemas/SummaryGear'
           type: array
+      type: object
     SummaryAthlete_allOf:
       properties:
         resource_state:
@@ -3674,6 +3675,7 @@ components:
           description: The time at which the athlete was last updated.
           format: date-time
           type: string
+      type: object
     SummaryClub_allOf:
       properties:
         profile_medium:
@@ -3716,6 +3718,7 @@ components:
         url:
           description: The club's vanity URL.
           type: string
+      type: object
     DetailedSegment_allOf:
       properties:
         created_at:
@@ -3744,6 +3747,7 @@ components:
         star_count:
           description: The number of stars for this segment
           type: integer
+      type: object
     DetailedSegmentEffort_allOf:
       properties:
         name:
@@ -3800,6 +3804,7 @@ components:
           description: Whether this effort should be hidden when viewed within an
             activity
           type: boolean
+      type: object
     DetailedActivity_allOf:
       properties:
         description:
@@ -3841,6 +3846,7 @@ components:
           items:
             $ref: '#/components/schemas/DetailedSegmentEffort'
           type: array
+      type: object
     SummaryActivity_allOf:
       properties:
         external_id:
@@ -3985,6 +3991,7 @@ components:
         weighted_average_watts:
           description: Similar to Normalized Power. Rides with power meter data only
           type: integer
+      type: object
     PhotosSummary_primary:
       properties:
         id:
@@ -3998,11 +4005,13 @@ components:
           additionalProperties:
             type: string
           type: object
+      type: object
     TimedZoneRange_allOf:
       properties:
         time:
           description: The number of seconds spent in this zone
           type: integer
+      type: object
     DetailedClub_allOf:
       properties:
         membership:
@@ -4023,6 +4032,7 @@ components:
           description: The number of athletes in the club that the logged-in athlete
             follows.
           type: integer
+      type: object
     DetailedGear_allOf:
       properties:
         brand_name:
@@ -4037,6 +4047,7 @@ components:
         description:
           description: The gear's description.
           type: string
+      type: object
     TimeStream_allOf:
       properties:
         data:
@@ -4044,6 +4055,7 @@ components:
           items:
             type: integer
           type: array
+      type: object
     DistanceStream_allOf:
       properties:
         data:
@@ -4052,6 +4064,7 @@ components:
             format: float
             type: number
           type: array
+      type: object
     LatLngStream_allOf:
       properties:
         data:
@@ -4059,6 +4072,7 @@ components:
           items:
             $ref: '#/components/schemas/LatLng'
           type: array
+      type: object
     AltitudeStream_allOf:
       properties:
         data:
@@ -4067,6 +4081,7 @@ components:
             format: float
             type: number
           type: array
+      type: object
     SmoothVelocityStream_allOf:
       properties:
         data:
@@ -4076,6 +4091,7 @@ components:
             format: float
             type: number
           type: array
+      type: object
     HeartrateStream_allOf:
       properties:
         data:
@@ -4084,6 +4100,7 @@ components:
           items:
             type: integer
           type: array
+      type: object
     CadenceStream_allOf:
       properties:
         data:
@@ -4092,6 +4109,7 @@ components:
           items:
             type: integer
           type: array
+      type: object
     PowerStream_allOf:
       properties:
         data:
@@ -4099,6 +4117,7 @@ components:
           items:
             type: integer
           type: array
+      type: object
     TemperatureStream_allOf:
       properties:
         data:
@@ -4107,6 +4126,7 @@ components:
           items:
             type: integer
           type: array
+      type: object
     MovingStream_allOf:
       properties:
         data:
@@ -4114,6 +4134,7 @@ components:
           items:
             type: boolean
           type: array
+      type: object
     SmoothGradeStream_allOf:
       properties:
         data:
@@ -4123,6 +4144,7 @@ components:
             format: float
             type: number
           type: array
+      type: object
   securitySchemes:
     strava_oauth:
       flows:
@@ -4147,4 +4169,5 @@ components:
               read access level
           tokenUrl: https://www.strava.com/api/v3/oauth/token
       type: oauth2
+x-original-swagger-version: "2.0"
 

@@ -2,6 +2,7 @@
 
 # AltitudeStreamDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

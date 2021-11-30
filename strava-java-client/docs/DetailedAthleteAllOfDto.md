@@ -2,6 +2,7 @@
 
 # DetailedAthleteAllOfDto
 
+
 ## Properties
 
 Name | Type | Description | Notes

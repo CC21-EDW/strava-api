@@ -2,6 +2,7 @@
 
 # ActivityZoneDto
 
+
 ## Properties
 
 Name | Type | Description | Notes
