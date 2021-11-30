@@ -54,7 +54,7 @@ import java.time.OffsetDateTime;
 import com.baloise.open.strava.client.auth.Authentication;
 import com.baloise.open.strava.client.auth.OAuth;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T09:50:39.653673500+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T10:08:10.913426500+01:00[Europe/Zurich]")
 @Component("com.baloise.open.strava.client.ApiClient")
 public class ApiClient extends JavaTimeFormatter {
     public enum CollectionFormat {

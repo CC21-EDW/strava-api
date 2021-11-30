@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   PhotosSummaryDto.JSON_PROPERTY_PRIMARY
 })
 @JsonTypeName("PhotosSummary")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T09:50:39.653673500+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T10:08:10.913426500+01:00[Europe/Zurich]")
 public class PhotosSummaryDto {
   public static final String JSON_PROPERTY_COUNT = "count";
   private Integer count;

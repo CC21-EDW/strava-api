@@ -63,7 +63,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DetailedSegmentDto.JSON_PROPERTY_STAR_COUNT
 })
 @JsonTypeName("DetailedSegment")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T09:50:39.653673500+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T10:08:10.913426500+01:00[Europe/Zurich]")
 public class DetailedSegmentDto {
   public static final String JSON_PROPERTY_ID = "id";
   private Long id;

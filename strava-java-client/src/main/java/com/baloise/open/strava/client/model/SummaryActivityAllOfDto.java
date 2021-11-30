@@ -76,7 +76,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   SummaryActivityAllOfDto.JSON_PROPERTY_WEIGHTED_AVERAGE_WATTS
 })
 @JsonTypeName("SummaryActivity_allOf")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T09:50:39.653673500+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T10:08:10.913426500+01:00[Europe/Zurich]")
 public class SummaryActivityAllOfDto {
   public static final String JSON_PROPERTY_EXTERNAL_ID = "external_id";
   private String externalId;

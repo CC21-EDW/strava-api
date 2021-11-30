@@ -23,6 +23,6 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: mvn --settings .github/maven-settings.xml deploy
       - name: Release using Github CLI
-        run: gh release create ${GITHUB_REF##*/} ./target/*.jar -t "Release ${GITHUB_REF##*/}"
+        run: gh release create ${GITHUB_REF##*/} ./strava-java-client/target/*.jar -t "Release ${GITHUB_REF##*/}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
