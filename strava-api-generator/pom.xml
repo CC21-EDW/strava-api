@@ -14,7 +14,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -29,7 +30,6 @@
         <url>https://www.baloise.com</url>
     </organization>
 
-    <groupId>com.baloise.open.edw</groupId>
     <artifactId>strava-api-generator</artifactId>
     <version>1.0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -95,6 +95,9 @@
                             <configOptions>
                                 <useBeanValidation>false</useBeanValidation>
 
+                <parentArtifactId>${parent.artifactId}</parentArtifactId>
+                <parentGroupId>${groupId}</parentGroupId>
+                <parentVersion>${version}</parentVersion>
                                 <basePackage>${target.package.name}</basePackage>
                                 <modelPackage>${target.package.name}.model</modelPackage>
                                 <apiPackage>${target.package.name}.api</apiPackage>
