@@ -91,6 +91,6 @@
 
     <modules>
         <module>strava-api-generator</module>
-        <!--module>strava-java-client</module-->
+        <module>strava-java-client</module>
     </modules>
 </project>

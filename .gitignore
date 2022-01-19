@@ -33,4 +33,4 @@ hs_err_pid*
 /.idea
 **/*.iml
 
-strava-java-client/**
+/strava-java-client/
