@@ -695,64 +695,6 @@ paths:
       tags:
       - SegmentEfforts
       x-accepts: application/json
-  /running_races/{id}:
-    get:
-      description: Returns a running race for a given identifier.
-      operationId: getRunningRaceById
-      parameters:
-      - description: The identifier of the running race.
-        in: path
-        name: id
-        required: true
-        schema:
-          format: int64
-          type: integer
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/RunningRace'
-          description: Representation of a running race.
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Fault'
-          description: Unexpected error.
-      summary: Get Running Race
-      tags:
-      - RunningRaces
-      x-accepts: application/json
-  /running_races:
-    get:
-      description: Returns a list running races based on a set of search criteria.
-      operationId: getRunningRaces
-      parameters:
-      - description: Filters the list by a given year.
-        in: query
-        name: year
-        schema:
-          type: integer
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/RunningRace'
-                type: array
-          description: Representation of a list of running race.
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Fault'
-          description: Unexpected error.
-      summary: List Running Races
-      tags:
-      - RunningRaces
-      x-accepts: application/json
   /activities:
     post:
       description: Creates a manual activity for an athlete, requires activity:write
@@ -1620,6 +1562,12 @@ paths:
                 cover_photo: https://dgalywyr863hv.cloudfront.net/pictures/clubs/1/4328276/1/large.jpg
                 cover_photo_small: https://dgalywyr863hv.cloudfront.net/pictures/clubs/1/4328276/1/small.jpg
                 sport_type: cycling
+                activity_types:
+                - Ride
+                - VirtualRide
+                - EBikeRide
+                - Velomobile
+                - Handcycle
                 city: San Francisco
                 state: California
                 country: United States
@@ -2584,6 +2532,47 @@ components:
           description: The club's name.
           type: string
       type: object
+    ActivityType:
+      description: An enumeration of the types an activity may have.
+      enum:
+      - AlpineSki
+      - BackcountrySki
+      - Canoeing
+      - Crossfit
+      - EBikeRide
+      - Elliptical
+      - Golf
+      - Handcycle
+      - Hike
+      - IceSkate
+      - InlineSkate
+      - Kayaking
+      - Kitesurf
+      - NordicSki
+      - Ride
+      - RockClimbing
+      - RollerSki
+      - Rowing
+      - Run
+      - Sail
+      - Skateboard
+      - Snowboard
+      - Snowshoe
+      - Soccer
+      - StairStepper
+      - StandUpPaddling
+      - Surfing
+      - Swim
+      - Velomobile
+      - VirtualRide
+      - VirtualRun
+      - Walk
+      - WeightTraining
+      - Wheelchair
+      - Windsurf
+      - Workout
+      - Yoga
+      type: string
     SummaryGear:
       properties:
         id:
@@ -2993,70 +2982,6 @@ components:
           description: The polyline of the segment
           type: string
       type: object
-    RunningRace:
-      example:
-        country: country
-        route_ids:
-        - 5
-        - 5
-        running_race_type: 6
-        distance: 1.4658129
-        website_url: website_url
-        city: city
-        start_date_local: 2000-01-23T04:56:07.000+00:00
-        name: name
-        measurement_preference: feet
-        id: 0
-        state: state
-        url: url
-      properties:
-        id:
-          description: The unique identifier of this race.
-          format: int64
-          type: integer
-        name:
-          description: The name of this race.
-          type: string
-        running_race_type:
-          description: The type of this race.
-          type: integer
-        distance:
-          description: The race's distance, in meters.
-          format: float
-          type: number
-        start_date_local:
-          description: The time at which the race begins started in the local timezone.
-          format: date-time
-          type: string
-        city:
-          description: The name of the city in which the race is taking place.
-          type: string
-        state:
-          description: The name of the state or geographical region in which the race
-            is taking place.
-          type: string
-        country:
-          description: The name of the country in which the race is taking place.
-          type: string
-        route_ids:
-          description: The set of routes that cover this race's course.
-          items:
-            format: int64
-            type: integer
-          type: array
-        measurement_preference:
-          description: The unit system in which the race should be displayed.
-          enum:
-          - feet
-          - meters
-          type: string
-        url:
-          description: The vanity URL of this race on Strava.
-          type: string
-        website_url:
-          description: The URL of this race's website.
-          type: string
-      type: object
     DetailedActivity:
       allOf:
       - $ref: '#/components/schemas/SummaryActivity'
@@ -3065,47 +2990,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/MetaActivity'
       - $ref: '#/components/schemas/SummaryActivity_allOf'
-    ActivityType:
-      description: An enumeration of the types an activity may have.
-      enum:
-      - AlpineSki
-      - BackcountrySki
-      - Canoeing
-      - Crossfit
-      - EBikeRide
-      - Elliptical
-      - Golf
-      - Handcycle
-      - Hike
-      - IceSkate
-      - InlineSkate
-      - Kayaking
-      - Kitesurf
-      - NordicSki
-      - Ride
-      - RockClimbing
-      - RollerSki
-      - Rowing
-      - Run
-      - Sail
-      - Skateboard
-      - Snowboard
-      - Snowshoe
-      - Soccer
-      - StairStepper
-      - StandUpPaddling
-      - Surfing
-      - Swim
-      - Velomobile
-      - VirtualRide
-      - VirtualRun
-      - Walk
-      - WeightTraining
-      - Wheelchair
-      - Windsurf
-      - Workout
-      - Yoga
-      type: string
     PhotosSummary:
       properties:
         count:
@@ -3688,12 +3572,19 @@ components:
           description: URL to a ~360x176  pixel cover photo.
           type: string
         sport_type:
+          description: Deprecated. Prefer to use activity_types.
           enum:
           - cycling
           - running
           - triathlon
           - other
           type: string
+        activity_types:
+          description: The activity types that count for a club. This takes precedence
+            over sport_type.
+          items:
+            $ref: '#/components/schemas/ActivityType'
+          type: array
         city:
           description: The club's city.
           type: string

@@ -4,7 +4,7 @@ Strava API v3
 
 - API version: 3.0.0
 
-- Build date: 2021-11-30T10:08:10.913426500+01:00[Europe/Zurich]
+- Build date: 2022-01-19T19:25:19.961950500+01:00[Europe/Zurich]
 
 The [Swagger Playground](https://developers.strava.com/playground) is the easiest way to familiarize yourself with the Strava API by submitting HTTP requests and observing the responses before you write any client code. It will show what a response will look like with different endpoints depending on the authorization scope you receive from your athletes. To use the Playground, go to https://www.strava.com/settings/api and change your “Authorization Callback Domain” to developers.strava.com. Please note, we only support Swagger 2.0. There is a known issue where you can only select one scope at a time. For more information, please check the section “client code” at https://developers.strava.com/docs.
 
@@ -42,7 +42,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.baloise.open.edw</groupId>
   <artifactId>strava-java-client</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.6-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -52,7 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.baloise.open.edw:strava-java-client:1.0.2-SNAPSHOT"
+compile "com.baloise.open.edw:strava-java-client:1.0.6-SNAPSHOT"
 ```
 
 ### Others
@@ -65,7 +65,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/strava-java-client-1.0.2-SNAPSHOT.jar`
+- `target/strava-java-client-1.0.6-SNAPSHOT.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -142,8 +142,6 @@ Class | Method | HTTP request | Description
 *RoutesApi* | [**getRouteAsTCX**](docs/RoutesApi.md#getRouteAsTCX) | **GET** /routes/{id}/export_tcx | Export Route TCX
 *RoutesApi* | [**getRouteById**](docs/RoutesApi.md#getRouteById) | **GET** /routes/{id} | Get Route
 *RoutesApi* | [**getRoutesByAthleteId**](docs/RoutesApi.md#getRoutesByAthleteId) | **GET** /athletes/{id}/routes | List Athlete Routes
-*RunningRacesApi* | [**getRunningRaceById**](docs/RunningRacesApi.md#getRunningRaceById) | **GET** /running_races/{id} | Get Running Race
-*RunningRacesApi* | [**getRunningRaces**](docs/RunningRacesApi.md#getRunningRaces) | **GET** /running_races | List Running Races
 *SegmentEffortsApi* | [**getEffortsBySegmentId**](docs/SegmentEffortsApi.md#getEffortsBySegmentId) | **GET** /segment_efforts | List Segment Efforts
 *SegmentEffortsApi* | [**getSegmentEffortById**](docs/SegmentEffortsApi.md#getSegmentEffortById) | **GET** /segment_efforts/{id} | Get Segment Effort
 *SegmentsApi* | [**exploreSegments**](docs/SegmentsApi.md#exploreSegments) | **GET** /segments/explore | Explore segments
@@ -206,7 +204,6 @@ Class | Method | HTTP request | Description
  - [PowerStreamDto](docs/PowerStreamDto.md)
  - [PowerZoneRangesDto](docs/PowerZoneRangesDto.md)
  - [RouteDto](docs/RouteDto.md)
- - [RunningRaceDto](docs/RunningRaceDto.md)
  - [SmoothGradeStreamAllOfDto](docs/SmoothGradeStreamAllOfDto.md)
  - [SmoothGradeStreamDto](docs/SmoothGradeStreamDto.md)
  - [SmoothVelocityStreamAllOfDto](docs/SmoothVelocityStreamAllOfDto.md)

@@ -15,6 +15,7 @@ package com.baloise.open.strava.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.baloise.open.strava.client.model.ActivityTypeDto;
 import com.baloise.open.strava.client.model.DetailedClubAllOfDto;
 import com.baloise.open.strava.client.model.SummaryClubDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -24,6 +25,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
@@ -37,6 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DetailedClubDto.JSON_PROPERTY_COVER_PHOTO,
   DetailedClubDto.JSON_PROPERTY_COVER_PHOTO_SMALL,
   DetailedClubDto.JSON_PROPERTY_SPORT_TYPE,
+  DetailedClubDto.JSON_PROPERTY_ACTIVITY_TYPES,
   DetailedClubDto.JSON_PROPERTY_CITY,
   DetailedClubDto.JSON_PROPERTY_STATE,
   DetailedClubDto.JSON_PROPERTY_COUNTRY,
@@ -51,7 +55,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DetailedClubDto.JSON_PROPERTY_FOLLOWING_COUNT
 })
 @JsonTypeName("DetailedClub")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-30T10:08:10.913426500+01:00[Europe/Zurich]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-19T19:25:19.961950500+01:00[Europe/Zurich]")
 public class DetailedClubDto {
   public static final String JSON_PROPERTY_ID = "id";
   private Long id;
@@ -72,7 +76,7 @@ public class DetailedClubDto {
   private String coverPhotoSmall;
 
   /**
-   * Gets or Sets sportType
+   * Deprecated. Prefer to use activity_types.
    */
   public enum SportTypeEnum {
     CYCLING("cycling"),
@@ -112,6 +116,9 @@ public class DetailedClubDto {
 
   public static final String JSON_PROPERTY_SPORT_TYPE = "sport_type";
   private SportTypeEnum sportType;
+
+  public static final String JSON_PROPERTY_ACTIVITY_TYPES = "activity_types";
+  private List<ActivityTypeDto> activityTypes = null;
 
   public static final String JSON_PROPERTY_CITY = "city";
   private String city;
@@ -342,11 +349,11 @@ public class DetailedClubDto {
   }
 
    /**
-   * Get sportType
+   * Deprecated. Prefer to use activity_types.
    * @return sportType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Deprecated. Prefer to use activity_types.")
   @JsonProperty(JSON_PROPERTY_SPORT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -357,6 +364,39 @@ public class DetailedClubDto {
 
   public void setSportType(SportTypeEnum sportType) {
     this.sportType = sportType;
+  }
+
+
+  public DetailedClubDto activityTypes(List<ActivityTypeDto> activityTypes) {
+    
+    this.activityTypes = activityTypes;
+    return this;
+  }
+
+  public DetailedClubDto addActivityTypesItem(ActivityTypeDto activityTypesItem) {
+    if (this.activityTypes == null) {
+      this.activityTypes = new ArrayList<>();
+    }
+    this.activityTypes.add(activityTypesItem);
+    return this;
+  }
+
+   /**
+   * The activity types that count for a club. This takes precedence over sport_type.
+   * @return activityTypes
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The activity types that count for a club. This takes precedence over sport_type.")
+  @JsonProperty(JSON_PROPERTY_ACTIVITY_TYPES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<ActivityTypeDto> getActivityTypes() {
+    return activityTypes;
+  }
+
+
+  public void setActivityTypes(List<ActivityTypeDto> activityTypes) {
+    this.activityTypes = activityTypes;
   }
 
 
@@ -676,6 +716,7 @@ public class DetailedClubDto {
         Objects.equals(this.coverPhoto, detailedClub.coverPhoto) &&
         Objects.equals(this.coverPhotoSmall, detailedClub.coverPhotoSmall) &&
         Objects.equals(this.sportType, detailedClub.sportType) &&
+        Objects.equals(this.activityTypes, detailedClub.activityTypes) &&
         Objects.equals(this.city, detailedClub.city) &&
         Objects.equals(this.state, detailedClub.state) &&
         Objects.equals(this.country, detailedClub.country) &&
@@ -692,7 +733,7 @@ public class DetailedClubDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, resourceState, name, profileMedium, coverPhoto, coverPhotoSmall, sportType, city, state, country, _private, memberCount, featured, verified, url, membership, admin, owner, followingCount);
+    return Objects.hash(id, resourceState, name, profileMedium, coverPhoto, coverPhotoSmall, sportType, activityTypes, city, state, country, _private, memberCount, featured, verified, url, membership, admin, owner, followingCount);
   }
 
   @Override
@@ -706,6 +747,7 @@ public class DetailedClubDto {
     sb.append("    coverPhoto: ").append(toIndentedString(coverPhoto)).append("\n");
     sb.append("    coverPhotoSmall: ").append(toIndentedString(coverPhotoSmall)).append("\n");
     sb.append("    sportType: ").append(toIndentedString(sportType)).append("\n");
+    sb.append("    activityTypes: ").append(toIndentedString(activityTypes)).append("\n");
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("    country: ").append(toIndentedString(country)).append("\n");

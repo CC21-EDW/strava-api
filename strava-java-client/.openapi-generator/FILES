@@ -56,8 +56,6 @@ docs/PowerStreamDto.md
 docs/PowerZoneRangesDto.md
 docs/RouteDto.md
 docs/RoutesApi.md
-docs/RunningRaceDto.md
-docs/RunningRacesApi.md
 docs/SegmentEffortsApi.md
 docs/SegmentsApi.md
 docs/SmoothGradeStreamAllOfDto.md
@@ -107,7 +105,6 @@ src/main/java/com/baloise/open/strava/client/api/AthletesApi.java
 src/main/java/com/baloise/open/strava/client/api/ClubsApi.java
 src/main/java/com/baloise/open/strava/client/api/GearsApi.java
 src/main/java/com/baloise/open/strava/client/api/RoutesApi.java
-src/main/java/com/baloise/open/strava/client/api/RunningRacesApi.java
 src/main/java/com/baloise/open/strava/client/api/SegmentEffortsApi.java
 src/main/java/com/baloise/open/strava/client/api/SegmentsApi.java
 src/main/java/com/baloise/open/strava/client/api/StreamsApi.java
@@ -164,7 +161,6 @@ src/main/java/com/baloise/open/strava/client/model/PowerStreamAllOfDto.java
 src/main/java/com/baloise/open/strava/client/model/PowerStreamDto.java
 src/main/java/com/baloise/open/strava/client/model/PowerZoneRangesDto.java
 src/main/java/com/baloise/open/strava/client/model/RouteDto.java
-src/main/java/com/baloise/open/strava/client/model/RunningRaceDto.java
 src/main/java/com/baloise/open/strava/client/model/SmoothGradeStreamAllOfDto.java
 src/main/java/com/baloise/open/strava/client/model/SmoothGradeStreamDto.java
 src/main/java/com/baloise/open/strava/client/model/SmoothVelocityStreamAllOfDto.java
@@ -196,7 +192,6 @@ src/test/java/com/baloise/open/strava/client/api/AthletesApiTest.java
 src/test/java/com/baloise/open/strava/client/api/ClubsApiTest.java
 src/test/java/com/baloise/open/strava/client/api/GearsApiTest.java
 src/test/java/com/baloise/open/strava/client/api/RoutesApiTest.java
-src/test/java/com/baloise/open/strava/client/api/RunningRacesApiTest.java
 src/test/java/com/baloise/open/strava/client/api/SegmentEffortsApiTest.java
 src/test/java/com/baloise/open/strava/client/api/SegmentsApiTest.java
 src/test/java/com/baloise/open/strava/client/api/StreamsApiTest.java
@@ -247,7 +242,6 @@ src/test/java/com/baloise/open/strava/client/model/PowerStreamAllOfDtoTest.java
 src/test/java/com/baloise/open/strava/client/model/PowerStreamDtoTest.java
 src/test/java/com/baloise/open/strava/client/model/PowerZoneRangesDtoTest.java
 src/test/java/com/baloise/open/strava/client/model/RouteDtoTest.java
-src/test/java/com/baloise/open/strava/client/model/RunningRaceDtoTest.java
 src/test/java/com/baloise/open/strava/client/model/SmoothGradeStreamAllOfDtoTest.java
 src/test/java/com/baloise/open/strava/client/model/SmoothGradeStreamDtoTest.java
 src/test/java/com/baloise/open/strava/client/model/SmoothVelocityStreamAllOfDtoTest.java
