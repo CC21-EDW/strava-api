@@ -94,9 +94,9 @@
                             <configOptions>
                                 <useBeanValidation>false</useBeanValidation>
 
-                <parentArtifactId>${parent.artifactId}</parentArtifactId>
-                <parentGroupId>${groupId}</parentGroupId>
-                <parentVersion>${version}</parentVersion>
+                <parentArtifactId>${project.parent.artifactId}</parentArtifactId>
+                <parentGroupId>${project.groupId}</parentGroupId>
+                <parentVersion>${project.version}</parentVersion>
                                 <basePackage>${target.package.name}</basePackage>
                                 <modelPackage>${target.package.name}.model</modelPackage>
                                 <apiPackage>${target.package.name}.api</apiPackage>
