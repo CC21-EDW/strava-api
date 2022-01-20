@@ -20,3 +20,27 @@ cp -R repository-template-java/ new-name && cd new-name && git config --local --
 Run e.g. on main: `mvn -B release:prepare` e.g. via [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io#https://github.com/CC21-EDW/strava-api)
 
 Subsequently the GitHub action worksflow "create release" will pick up the published tag and release and deploy the artifacts in the Github package registry.
+
+## Build behind Firewall
+
+### Maven
+Add proxy to settings.xml (however in IntelliJ that does not properly work):
+```
+<setings
+	<proxies>
+		<proxy>
+			<id>http-proxyproxy</id>
+			<active>true</active>
+			<protocol>http</protocol>
+			<host>localhost</host>
+			<port>8888</port>
+		</proxy>
+	</proxies>
+</settings>
+```
+
+### IntelliJ
+File > Settings > Build, Execution, Deployments > Maven > Runner > VM Arguments
+```
+-DproxyHost=localhost -DproxyPort=8888 -DproxySet=true -Dio.swagger.parser.util.RemoteUrl.trustAll=true -Dio.swagger.v3.parser.util.RemoteUrl.trustAll=true
+```
