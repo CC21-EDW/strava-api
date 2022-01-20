@@ -40,7 +40,6 @@
         <maven.compiler.target>17</maven.compiler.target>
 
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
-        <maven-javadoc-plugin.version>3.3.1</maven-javadoc-plugin.version>
         <openapi-generator-maven-plugin.version>5.3.1</openapi-generator-maven-plugin.version>
 
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
@@ -49,81 +48,6 @@
     </properties>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>${maven-clean-plugin.version}</version>
-                <configuration>
-                    <filesets>
-                        <fileset>
-                            <directory>${project.basedir}/../strava-java-client</directory>
-                            <includes>
-                                <include>**</include>
-                            </includes>
-                        </fileset>
-                    </filesets>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven-javadoc-plugin.version}</version>
-                <configuration>
-                    <javadocExecutable>${java.home}/../bin/javadoc</javadocExecutable>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.openapitools</groupId>
-                <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>${openapi-generator-maven-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <output>${project.basedir}/../strava-java-client</output>
-                            <inputSpec>https://developers.strava.com/swagger/swagger.json</inputSpec>
-                            <!-- used behind firewall -->
-                            <!-- inputSpec>${project.basedir}/src/main/resources/swagger.json</inputSpec-->
-
-                            <skipValidateSpec>true</skipValidateSpec>
-
-                            <groupId>com.baloise.open.edw</groupId>
-                            <artifactId>strava-java-client</artifactId>
-                            <artifactVersion>${project.version}</artifactVersion>
-
-                            <generatorName>java</generatorName>
-                            <library>resttemplate</library>
-
-                            <modelNameSuffix>Dto</modelNameSuffix>
-
-                            <configOptions>
-                                <useBeanValidation>false</useBeanValidation>
-
-                                <parentArtifactId>${project.parent.artifactId}</parentArtifactId>
-                                <parentGroupId>${project.groupId}</parentGroupId>
-                                <parentVersion>${project.version}</parentVersion>
-                                <basePackage>${target.package.name}</basePackage>
-                                <modelPackage>${target.package.name}.model</modelPackage>
-                                <apiPackage>${target.package.name}.api</apiPackage>
-
-                                <dateLibrary>java8</dateLibrary>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>javax.annotation</groupId>
-                        <artifactId>javax.annotation-api</artifactId>
-                        <version>${javax.annotation-api.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-
         <resources>
             <resource>
                 <directory>.</directory>
@@ -133,4 +57,79 @@
             </resource>
         </resources>
     </build>
+
+    <profiles>
+        <profile>
+            <id>generate-from-swagger</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-clean-plugin</artifactId>
+                        <version>${maven-clean-plugin.version}</version>
+                        <configuration>
+                            <filesets>
+                                <fileset>
+                                    <directory>${project.basedir}/../strava-java-client</directory>
+                                    <includes>
+                                        <include>**</include>
+                                    </includes>
+                                </fileset>
+                            </filesets>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.openapitools</groupId>
+                        <artifactId>openapi-generator-maven-plugin</artifactId>
+                        <version>${openapi-generator-maven-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>generate</goal>
+                                </goals>
+                                <configuration>
+
+                                    <output>${project.basedir}/../strava-java-client</output>
+                                    <!--inputSpec>https://developers.strava.com/swagger/swagger.json</inputSpec-->
+                                    <!-- used behind firewall -->
+                                    <inputSpec>${project.basedir}/src/main/resources/swagger.json</inputSpec>
+
+                                    <skipValidateSpec>true</skipValidateSpec>
+
+                                    <groupId>com.baloise.open.edw</groupId>
+                                    <artifactId>strava-java-client</artifactId>
+                                    <artifactVersion>${project.version}</artifactVersion>
+
+                                    <generatorName>java</generatorName>
+                                    <library>resttemplate</library>
+
+                                    <modelNameSuffix>Dto</modelNameSuffix>
+
+                                    <configOptions>
+                                        <useBeanValidation>false</useBeanValidation>
+
+                                        <parentArtifactId>${project.parent.artifactId}</parentArtifactId>
+                                        <parentGroupId>${project.parent.groupId}</parentGroupId>
+                                        <parentVersion>${project.parent.version}</parentVersion>
+                                        <basePackage>${target.package.name}</basePackage>
+                                        <modelPackage>${target.package.name}.model</modelPackage>
+                                        <apiPackage>${target.package.name}.api</apiPackage>
+
+                                        <dateLibrary>java8</dateLibrary>
+                                    </configOptions>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <dependencies>
+                            <dependency>
+                                <groupId>javax.annotation</groupId>
+                                <artifactId>javax.annotation-api</artifactId>
+                                <version>${javax.annotation-api.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
