@@ -74,9 +74,9 @@
                             <filesets>
                                 <fileset>
                                     <directory>${project.basedir}/../strava-java-client</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
+                                    <excludes>
+                                        <exclude>pom.xml</exclude>
+                                    </excludes>
                                 </fileset>
                             </filesets>
                         </configuration>
