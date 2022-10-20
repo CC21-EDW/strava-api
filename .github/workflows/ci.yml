@@ -11,9 +11,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master # don't get confused by @master - it is the version of the checkout action. You repo will be checked out with ${{ github.ref }}
       - name: Set up JDK 17
-        uses: actions/setup-java@main
+        uses: actions/setup-java@v3
         with:
-          java-version: 17
+          java-version: '17'
+          distribution: 'adopt'
+          cache: maven
       - name: Cache Maven packages
         uses: actions/cache@main
         with:
